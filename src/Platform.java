@@ -1,3 +1,7 @@
+/*
+ * class for the object platform which contains the name price and the id
+ * 
+ */
 public class Platform {
 	
 	private String name;

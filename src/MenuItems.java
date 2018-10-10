@@ -1,5 +1,15 @@
 import java.util.*;
 
+/**
+ * 
+ * class represents the menuItems for the Menu decision
+ * line - one line in the menuItem
+ * spacer - for design purposes
+ * 
+ * @author Patrick
+ *
+ */
+
 public class MenuItems {
 
 	private String line;

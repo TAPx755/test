@@ -3,6 +3,14 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
+/**
+ * failed the class design cause i called the class MenuItems but it's only a MenuItem
+ * so this is the emergency menu
+ * 
+ * 
+ *
+ */
+
 public class NewMenu {
 	private int counter;
 	private int lastCounter;
@@ -23,6 +31,11 @@ public class NewMenu {
 		equip[1] =false;
 		equip[2] =false;
 	}
+	
+	/*
+	 * method for processing the menu
+	 * this.counter decides the option that is getting executed
+	 */
 	public void processMenu()
 	{
 
@@ -115,6 +128,11 @@ public class NewMenu {
 		}while(this.counter != 10);
 	}
 	
+	/**
+	 * 
+	 * output for the root menu
+	 * after recording the input it calls the method processMenu();
+	 */
 	public void showMenu()
 	{
 		Scanner scan = new Scanner(System.in);
@@ -134,11 +152,19 @@ public class NewMenu {
 		processMenu();
 	}
 	
+	/*
+	 * 
+	 * if the user decides to buy it leaves the menu and give an report
+	 */
 	public void buy()
 	{
 		leaveMenu();
 	}
 	
+	/*
+	 * 
+	 * output if the user chooses the platform option
+	 */
 	public void chooseSeries()
 	{
 		Scanner scan = new Scanner(System.in);
@@ -161,6 +187,12 @@ public class NewMenu {
 		}
 		this.counter = scan.nextInt();
 	}
+	
+	/*
+	 * 
+	 * if he choose the a models
+	 * platform is set to 1 and the price to the referenced platform
+	 */
 	public void aModels()
 	{
 
@@ -178,6 +210,11 @@ public class NewMenu {
 		this.counter = 1;
 		processMenu();
 	}
+	/*
+	 * 
+	 * if he choose the q models
+	 * platform is set to 2 and the price to the referenced platform
+	 */
 	public void qModels()
 	{
 
@@ -196,6 +233,10 @@ public class NewMenu {
 		processMenu();
 	}
 	
+	/*
+	 * 
+	 * output for the equip menu
+	 */
 	public void chooseEquip()
 	{
 		Scanner scan = new Scanner(System.in);
@@ -219,6 +260,11 @@ public class NewMenu {
 		this.counter = scan.nextInt();
 	}
 	
+	/*
+	 * 
+	 * if he chooses climate the equip array at the pos 0 is set to true
+	 * price to referenced equip
+	 */
 	public void climate()
 	{
 		if(equip[0] == false)
@@ -235,6 +281,10 @@ public class NewMenu {
 		this.counter =2;
 		processMenu();
 	}
+	/*
+	 * if he chooses sport the equip array at the pos 1 is set to true
+	 * price referenced to sport is set
+	 */
 	public void sport()
 	{
 		if(equip[1] == false)
@@ -251,6 +301,10 @@ public class NewMenu {
 		this.counter =2;
 		processMenu();
 	}
+	/*
+	 * if he chooses heating the equip array at the pos 2 is set to true
+	 * price referenced to heating is set
+	 */
 	public void heating()
 	{
 		if(equip[2] == false)
@@ -268,6 +322,10 @@ public class NewMenu {
 		processMenu();
 	}
 	
+	/*
+	 * leave menu (exit's the programm)
+	 * report of the choosen elements is given
+	 */
 	public void leaveMenu()
 	{
 		System.out.println("Schade dass Sie den Konfigurator schon beenden :(");
@@ -284,6 +342,10 @@ public class NewMenu {
 		return round(price,2);
 	}
 	
+	/*
+	 * 
+	 * rounding method
+	 */
 	private static double round(double value, int places) {
 	    if (places < 0) throw new IllegalArgumentException();
 	 

@@ -1,3 +1,8 @@
+/*
+ * defines an object named ausstattung which contains name, price and an id
+ * 
+ */
+
 public class Ausstattung {
 	
 	private String name;
@@ -11,6 +16,10 @@ public class Ausstattung {
 		this.id = id;
 	}
 	
+	/*
+	 * some getter and setters
+	 *
+	 */
 	public String getName() {
 		return this.name;
 	}
